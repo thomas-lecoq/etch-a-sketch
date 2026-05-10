@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Swanky and Moo Moo", cursive;
+    font-style: normal;
+    background-color: rgb(183, 197, 199);
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 48px;
+}
+
+input {
+    border-radius: 12px;
+    font: inherit;
+    font-size: 24px;
+    text-align: center;
+    width: 200px;
+}
+
+.gradient-silver {
+    background: linear-gradient(135deg, white, rgb(212, 208, 208));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.menu-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    color : white;
+    background: linear-gradient(135deg, #283fa5, #8338ec, #3a86ff);
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
+.menu-controls-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reset-button {
+    border-radius: 12px;
+    font: inherit;
+    font-size: 24px;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgb(183, 197, 199);
+}
+
+.submenu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+}
+
+.workspace-container {
+    flex: 3;
+}

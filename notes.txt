@@ -1,0 +1,18 @@
+Project goal :
+
+- Create a webpage with a 16x16 grid of divs
+- The grid must me created with javascript
+- Flexbox must be used to make the divs appear as grid
+
+- set hover effect so the grid change color when mouse passes over them
+--> Event listener can be set up to do so
+
+- Add button on the top of the screen asking for number of squares per side for a new grid
+- Once entered, the actual grid should be replace and the new grid should take the same space than the old One
+- Set limit for user input to max of 100
+
+
+Extra Credit :
+- Randomize squares rgb value
+- Add color picker
+- implement a progressive darkening effect with opacity css property
