@@ -9,7 +9,9 @@ import { appendNewElement } from './utils.js';
  */
 function createWorkspaceUi() {
     const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
-    appendNewElement('div', 'workspace-ui', workspaceContainer)
+    const workspaceUi = appendNewElement('div', 'workspace-ui', workspaceContainer);
+
+    return workspaceUi;
 }
 
 
