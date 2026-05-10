@@ -61,7 +61,6 @@ function createGrid(
  * @param {number} [numberOfCols=DEFAULT_GRID_SIZE.nCols] - number of columns of the grid
 */
 function resizeGrid(numberOfRows, numberOfCols) {
-    const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
     const workspaceUi = document.querySelector(`.${WORKSPACE_UI_CLASS}`);
 
     // if workspaceUi exists, remove it in order to recreate it
@@ -69,7 +68,7 @@ function resizeGrid(numberOfRows, numberOfCols) {
         workspaceUi.remove();
     }
 
-    createGrid(numberOfRows, numberOfCols, workspaceUi);
+    createGrid(numberOfRows, numberOfCols);
 }
 
 export { createGrid, resizeGrid };
