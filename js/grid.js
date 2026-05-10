@@ -1,5 +1,4 @@
-// Création et manipulation de la grille de dessin
-// (initialisation, redimensionnement).
+// Creation and manipulation of the grid
 
 import { WORKSPACE_CONTAINER_CLASS, DEFAULT_GRID_SIZE} from './config.js';
 import { appendNewElement } from './utils.js';

@@ -1,5 +1,4 @@
-// Fonctions utilitaires réutilisables, indépendantes du métier
-// (ex : génération de couleur aléatoire, clamp d'une valeur, etc.).
+// Utils functions
 
 /**
  * Create an element with a class and append it to a parent node.

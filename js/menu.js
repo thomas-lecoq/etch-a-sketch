@@ -1,2 +1,5 @@
-// Gestion de l'interface du menu
-// (boutons, input de taille de grille, écouteurs d'événements UI).
+// Menu handler
+
+// Grid size change (event = change)
+
+// Grid reset button
