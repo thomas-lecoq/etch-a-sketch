@@ -76,4 +76,13 @@ input {
 
 .workspace-container {
     flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workspace-ui {
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    border: dashed 1px red;
 }
