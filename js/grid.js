@@ -57,7 +57,7 @@ function createGrid(
  * @param {HTMLElement} [workspaceUi=createWorkspaceUi()] - workspaceUi element
 */
 function resizeGrid(numberOfRows, numberOfCols, workspaceUi=createWorkspaceUi()) {
-    const workspaceContainer = document.querySelector('.workspace-container');
+    const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
     workspaceContainer.removeChild(workspaceUi);
     createGrid(numberOfRows, numberOfCols, workspaceUi);
 }
