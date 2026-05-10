@@ -5,8 +5,9 @@ import { WORKSPACE_CONTAINER_CLASS } from './config.js';
 import { appendNewElement } from './utils.js';
 
 /**
- * init workspace-ui, attach it to workspace-container
- */
+ * Init workspace-ui, attach it to workspace-container
+ * @returns {HTMLElement} workspaceUi element
+*/
 function createWorkspaceUi() {
     const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
     const workspaceUi = appendNewElement('div', 'workspace-ui', workspaceContainer);
@@ -17,6 +18,6 @@ function createWorkspaceUi() {
 
 export { createWorkspaceUi };
 
+// add title
 
-// add title, svg
 // create grid
