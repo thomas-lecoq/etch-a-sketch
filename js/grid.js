@@ -3,19 +3,18 @@
 
 "use strict";
 import { WORKSPACE_CONTAINER_CLASS } from './config.js';
-import { createElementAttachClass } from './utils.js';
+import { appendNewElement } from './utils.js';
 
 /**
  * init workspace-ui, attach it to workspace-container
  */
-function createAppendWorkspaceUi() {
-    const workspaceUi = createElementAttachClass('div', 'workspace-ui');
+function createWorkspaceUi() {
     const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
-    workspaceContainer.appendChild(workspaceUi);
+    appendNewElement('div', 'workspace-ui', workspaceContainer)
 }
 
 
-export { createAppendWorkspaceUi };
+export { createWorkspaceUi };
 
 
 // add title, svg

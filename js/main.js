@@ -2,6 +2,6 @@
 // Ne contient pas de logique métier, se contente d'orchestrer.
 
 "use strict";
-import { createAppendWorkspaceUi } from './grid.js';
+import { createWorkspaceUi } from './grid.js';
 
-createAppendWorkspaceUi();
+createWorkspaceUi();
