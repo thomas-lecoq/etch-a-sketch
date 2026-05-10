@@ -1,6 +1,6 @@
 // Creation and manipulation of the grid
 
-import { WORKSPACE_CONTAINER_CLASS, DEFAULT_GRID_SIZE} from './config.js';
+import { WORKSPACE_CONTAINER_CLASS, WORKSPACE_UI_CLASS, DEFAULT_GRID_SIZE} from './config.js';
 import { appendNewElement } from './utils.js';
 
 /**
@@ -37,7 +37,12 @@ function createWorkspaceUi() {
 function createGrid(
     numberOfRows=DEFAULT_GRID_SIZE.nRows, 
     numberOfCols=DEFAULT_GRID_SIZE.nCols, 
-    workspaceUi=createWorkspaceUi()) {
+    workspaceUi=null) {
+
+    // if no workspaceUi passed, set one by default
+    if (!workspaceUi) {
+        workspaceUi = createWorkspaceUi();
+    }
     
     // create the grid element
     const workspaceGrid = appendNewElement('div', 'workspace-grid', workspaceUi);
@@ -54,11 +59,16 @@ function createGrid(
  * Resize workspace grid
  * @param {number} [numberOfRows=DEFAULT_GRID_SIZE.nRows] - number of rows of the grid
  * @param {number} [numberOfCols=DEFAULT_GRID_SIZE.nCols] - number of columns of the grid
- * @param {HTMLElement} [workspaceUi=createWorkspaceUi()] - workspaceUi element
 */
-function resizeGrid(numberOfRows, numberOfCols, workspaceUi=createWorkspaceUi()) {
+function resizeGrid(numberOfRows, numberOfCols) {
     const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
-    workspaceContainer.removeChild(workspaceUi);
+    const workspaceUi = document.querySelector(`.${WORKSPACE_UI_CLASS}`);
+
+    // if workspaceUi exists, remove it in order to recreate it
+    if (workspaceUi) {
+        workspaceUi.remove();
+    }
+
     createGrid(numberOfRows, numberOfCols, workspaceUi);
 }
 
