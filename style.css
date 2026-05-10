@@ -82,7 +82,12 @@ input {
 }
 
 .workspace-ui {
-    width: 45%;
+    width: 60%;
     aspect-ratio: 1 / 1;
     border: dashed 1px red;
+}
+
+.workspace-title {
+    text-align: center;
+    font-size: 48px;
 }
