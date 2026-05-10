@@ -15,11 +15,9 @@ function initGridSizeInput() {
             // control input quality
             const alertText = 'Please set a grid size between 1 and 100'; 
             switch(true) {
-                case Number.isNaN(newGridSize):
-                    return;
-                case  (newGridSize < 1 || newGridSize > 100):
+                case (Number.isNaN(newGridSize) || newGridSize < 1 || newGridSize > 100):
                     alert(alertText);
-                    break;
+                    return;
                 default:
                     resizeGrid(newGridSize, newGridSize);
             };
