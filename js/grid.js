@@ -51,4 +51,16 @@ function createGrid(
     }
 }
 
-export { createGrid };
+/**
+ * Resize workspace grid
+ * @param {number} [numberOfRows=DEFAULT_GRID_SIZE.nRows] - number of rows of the grid
+ * @param {number} [numberOfCols=DEFAULT_GRID_SIZE.nCols] - number of columns of the grid
+ * @param {HTMLElement} [workspaceUi=createWorkspaceUi()] - workspaceUi element
+*/
+function resizeGrid(numberOfRows, numberOfCols, workspaceUi=createWorkspaceUi()) {
+    const workspaceContainer = document.querySelector('.workspace-container');
+    workspaceContainer.removeChild(workspaceUi);
+    createGrid(numberOfRows, numberOfCols, workspaceUi);
+}
+
+export { createGrid, resizeGrid };
