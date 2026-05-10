@@ -1,7 +1,6 @@
 // Constantes globales du projet (taille par défaut de la grille, couleurs,
 // sélecteurs DOM, etc.). Centralise toutes les "valeurs magiques" pour qu'on
 // puisse les modifier depuis un seul endroit.
-"use strict";
 
 // html classes
 const WORKSPACE_CONTAINER_CLASS = 'workspace-container'; 

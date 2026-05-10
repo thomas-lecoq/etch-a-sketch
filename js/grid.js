@@ -1,7 +1,6 @@
 // Création et manipulation de la grille de dessin
 // (initialisation, redimensionnement).
 
-"use strict";
 import { WORKSPACE_CONTAINER_CLASS } from './config.js';
 import { appendNewElement } from './utils.js';
 
