@@ -1,7 +1,7 @@
 // Création et manipulation de la grille de dessin
 // (initialisation, redimensionnement).
 
-import { WORKSPACE_CONTAINER_CLASS } from './config.js';
+import { WORKSPACE_CONTAINER_CLASS, DEFAULT_GRID_SIZE} from './config.js';
 import { appendNewElement } from './utils.js';
 
 /**
@@ -29,9 +29,26 @@ function createWorkspaceUi() {
     return workspaceUi;
 }
 
+/**
+ * Create workspace grid, append it to workspace-ui
+ * @param {number} [numberOfRows=DEFAULT_GRID_SIZE.nRows] - number of rows of the grid
+ * @param {number} [numberOfCols=DEFAULT_GRID_SIZE.nCols] - number of columns of the grid
+ * @param {HTMLElement} [workspaceUi=createWorkspaceUi()] - workspaceUi element
+*/
+function createGrid(
+    numberOfRows=DEFAULT_GRID_SIZE.nRows, 
+    numberOfCols=DEFAULT_GRID_SIZE.nCols, 
+    workspaceUi=createWorkspaceUi()) {
+    
+    // create the grid element
+    const workspaceGrid = appendNewElement('div', 'workspace-grid', workspaceUi);
+    // create n rows and n cells per row
+    for (let row = 0; row < numberOfRows; row++) {
+        const newRow = appendNewElement('div', 'grid-row', workspaceGrid);
+        for (let col = 0; col < numberOfCols; col++) {
+            const newCol = appendNewElement('div', 'grid-col', newRow);
+        }
+    }
+}
 
-export { createWorkspaceUi };
-
-// add title
-
-// create grid
+export { createGrid };
