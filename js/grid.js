@@ -1,6 +1,6 @@
 // Creation and manipulation of the grid
 
-import { WORKSPACE_CONTAINER_CLASS, WORKSPACE_UI_CLASS, DEFAULT_GRID_SIZE} from './config.js';
+import { WORKSPACE_CONTAINER_CLASS, WORKSPACE_UI_CLASS, WORKSPACE_GRID_CLASS, DEFAULT_GRID_SIZE} from './config.js';
 import { appendNewElement } from './utils.js';
 
 /**
@@ -22,7 +22,7 @@ function appendWorkspaceTitle(workspaceUi, text) {
 */
 function createWorkspaceUi() {
     const workspaceContainer = document.querySelector(`.${WORKSPACE_CONTAINER_CLASS}`);
-    const workspaceUi = appendNewElement('div', 'workspace-ui', workspaceContainer);
+    const workspaceUi = appendNewElement('div', WORKSPACE_UI_CLASS, workspaceContainer);
     appendWorkspaceTitle(workspaceUi, 'Draw here !');
 
     return workspaceUi;
@@ -45,7 +45,7 @@ function createGrid(
     }
     
     // create the grid element
-    const workspaceGrid = appendNewElement('div', 'workspace-grid', workspaceUi);
+    const workspaceGrid = appendNewElement('div', WORKSPACE_GRID_CLASS, workspaceUi);
     // create n rows and n cells per row
     for (let row = 0; row < numberOfRows; row++) {
         const newRow = appendNewElement('div', 'grid-row', workspaceGrid);
