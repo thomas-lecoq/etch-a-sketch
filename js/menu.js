@@ -1,5 +1,5 @@
 // Menu handler
-import { GRID_SIZE_INPUT_CLASS } from "./config.js"
+import { GRID_SIZE_INPUT_CLASS, RESET_BUTTON_CLASS } from "./config.js"
 import { resizeGrid } from "./grid.js";
 
 // Grid size change (event = change)
@@ -22,6 +22,16 @@ function initGridSizeInput() {
                     resizeGrid(newGridSize, newGridSize);
             };
         }
+    });
+}
+
+/**
+ * Reset workspace grid base on user input
+*/
+function resetGrid() {
+    const resetButton = document.querySelector(`.${RESET_BUTTON_CLASS}`);
+    resetButton.addEventListener('click', () => {
+        initGridSizeInput();
     });
 }
 
