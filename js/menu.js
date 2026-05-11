@@ -2,7 +2,9 @@
 import { GRID_SIZE_INPUT_CLASS, RESET_BUTTON_CLASS } from "./config.js"
 import { resizeGrid } from "./grid.js";
 
-// Grid size change (event = change)
+/**
+ * Reset workspace grid size base on user input field
+*/
 function initGridSizeInput() {
     const input = document.querySelector(`.${GRID_SIZE_INPUT_CLASS}`);
 
