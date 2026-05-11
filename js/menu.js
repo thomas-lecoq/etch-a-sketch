@@ -1,4 +1,5 @@
 // Menu handler
+
 import { GRID_SIZE_INPUT_CLASS, RESET_BUTTON_CLASS, DEFAULT_GRID_SIZE } from "./config.js"
 import { resizeGrid } from "./grid.js";
 
