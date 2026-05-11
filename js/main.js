@@ -1,7 +1,8 @@
 import { drawOnGrid } from './drawing.js';
 import { createGrid } from './grid.js';
-import { initGridSizeInput } from './menu.js';
+import { initGridSizeInput, resetGrid } from './menu.js';
 
 createGrid();
 initGridSizeInput();
 drawOnGrid();
+resetGrid();

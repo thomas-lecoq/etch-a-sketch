@@ -1,5 +1,5 @@
 // Menu handler
-import { GRID_SIZE_INPUT_CLASS, RESET_BUTTON_CLASS } from "./config.js"
+import { GRID_SIZE_INPUT_CLASS, RESET_BUTTON_CLASS, DEFAULT_GRID_SIZE } from "./config.js"
 import { resizeGrid } from "./grid.js";
 
 /**
@@ -32,11 +32,10 @@ function initGridSizeInput() {
 */
 function resetGrid() {
     const resetButton = document.querySelector(`.${RESET_BUTTON_CLASS}`);
-    resetButton.addEventListener('click', () => {
-        initGridSizeInput();
+    const input = document.querySelector(`.${GRID_SIZE_INPUT_CLASS}`);
+    resetButton.addEventListener('click', (e) => {
+        resizeGrid(DEFAULT_GRID_SIZE.nRows, DEFAULT_GRID_SIZE.nCols);
+        input.value = DEFAULT_GRID_SIZE.nRows;
     });
 }
-
-// Grid reset button
-
-export { initGridSizeInput };
+export { resetGrid, initGridSizeInput };
